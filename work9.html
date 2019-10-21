@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>事件</title>
+		<style type="text/css">
+			input{font-size:26px;margin-top: 20px;}
+			body{background-image: url(img/work9_img/grassland.png);}
+			#mytank{position: absolute;left:10px;top:100px}
+		</style>
+	</head>
+	<body>
+		<input  id="butn1" type="button" value="按钮一" onclick="mybutn1()"/>
+		<input id="butn2" type="button" value="按钮二" />
+		<input id="butn3" type="button" value="按钮三" />
+		<hr />
+		<img id="mytank" src="img/work9_img/right.png">
+		
+		
+		<script type="text/javascript">
+			/*点击按钮一，弹出信息提示框，显示“javascript事件测试一”*/
+			function mybutn1(){
+				alert("javascript事件测试一");
+			}
+			/*双击按钮二，按钮文字变为“按钮二测试”*/
+			document.getElementById("butn2").ondblclick=function(){
+				butn2.value="按钮二测试";
+			}
+			
+			/*鼠标移到按钮三上，按钮三的背景和文字颜色改变；同时，单击按钮三，弹出框显示“javascript事件测试三”*/
+			document.getElementById("butn3").onmouseover=function(){;
+				butn3.style.backgroundColor="blue";
+				butn3.style.color="white";
+			}
+			document.getElementById("butn3").onclick=function(){;
+				alert("javascript事件测试三");
+			}
+			
+			
+			/*键盘控制坦克的上下左右移动*/
+			var mytank = document.getElementById('mytank');
+			window.addEventListener(
+				'keydown',
+				function(e){
+					console.log(e.keyCode);
+					if(e.keyCode == 39 || e.keyCode == 68){
+						document.getElementById("mytank").src="img/work9_img/right.png";
+						mytank.style.left = (mytank.offsetLeft+10)+'px'; 
+					}
+					if(e.keyCode == 37 || e.keyCode == 65){
+						document.getElementById("mytank").src="img/work9_img/left.png";
+						mytank.style.left = (mytank.offsetLeft-10)+'px'; 
+					}
+					if(e.keyCode == 38 || e.keyCode == 87){
+						document.getElementById("mytank").src="img/work9_img/up.png";
+						mytank.style.top = (mytank.offsetTop-10)+'px'; 
+					}
+					if(e.keyCode == 40 || e.keyCode == 83){
+						document.getElementById("mytank").src="img/work9_img/down.png";
+						mytank.style.top = (mytank.offsetTop+10)+'px'; 
+					}
+				});		
+			
+		</script>
+	</body>
+</html>
+

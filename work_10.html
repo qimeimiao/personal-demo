@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body,div{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.main{
+				width: 800px;
+				height: 660px;
+				border: 1px #000000 solid;
+				margin:0 auto;
+				background-color: #4F4F4F;
+			}
+			.guanggao_01{
+				position: absolute;
+				top: 0px;
+			}
+			.gb01{
+				position: absolute;
+				top: 232px;
+				left: 50px;
+			}
+			.guanggao_02{
+				position: absolute;
+				top: 0px;
+				left: 1248px;
+			}
+			.gb02{
+				position: absolute;
+				top: 232px;
+			}
+			
+			.guanggao_03{
+				position: absolute;
+				left: 1060px;
+				top: 410px;
+			}
+			.gb03{
+				position: absolute;
+				top: 0px;
+				left: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="main"></div>
+		<div class="guanggao_01" id="go1">
+			<img src="img/work10_img/ad1.jpg">
+			<a class="gb01"><img src="img/work10_img/close.png" id="close1"></a>
+		</div>
+		<div class="guanggao_02" id="go2">
+			<img src="img/work10_img/ad1.jpg">
+			<a class="gb02"><img src="img/work10_img/close.png" id="close2"></a>
+		</div>
+		
+		<div class="guanggao_03" id="go3" style="display: none;" onload="show()">
+			<img src="img/work10_img/ad2.jpg" />
+			<a class="gb03"><img src="img/work10_img/close.png" id="close3"/></a>
+		</div>
+		
+	</body>
+	<script type="text/ecmascript">
+		var go1=document.getElementById("go1");
+		var close1=document.getElementById("close1");
+		var close2=document.getElementById("close2");
+		
+		close1.onclick=function(){
+			go1.style.display="none";
+			go2.style.display="none";
+		}
+		close2.onclick=function(){
+			go1.style.display="none";
+			go2.style.display="none";
+		}
+		
+		//实现广告3的动画飘出
+		var time;
+		var srcInter = null; 
+		var current = 0
+		window.onload = function() {
+		time = window.setInterval("show()", 1000);
+	}
+	// 显示广告的方法
+	function show() {
+		var target = 410;
+		// 获得广告的div元素
+		var go3 = document.getElementById("go3");
+		go3.style.display = "block";
+		window.clearInterval(time); // 清空掉之前设置的定时
+		time= setInterval(function(){
+            current = current +(target-current)/20;
+            go3.style.top = current+"px";		//实现go3对象的移动效果
+        },10);
+	}	
+		close3.onclick=function(){
+			go3.style.display="none";
+		}
+		
+		
+		
+	</script>
+	
+	
+</html>

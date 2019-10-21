@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/work4_css/style.css" />
+		<script type="text/javascript" src="js/jquery-3.4.0.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js" ></script>
+
+		<script src="js/additional-methods.min.js"></script>
+		<script src="js/messages_zh.js"></script>
+
+		<style type="text/css">
+			.error{
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="logo-con">
+				<a href="#" class="logo "><img src="img/work4_img/register_03.jpg" </a>
+					<a href="#" class="logo-title">欢迎注册</a>
+			</div>
+		</div>
+		<!--表单部分-->
+		<form action="https://www.baidu.com/" method="post" id="con_form">
+			<div class="register-box" id="userbox">
+				<label for="username" class="username_label">用 户 名
+					<input maxlength="20" type="text" placeholder="您的用户名和登录名" id="username" name="username"/>
+				</label>
+				<div class="tips" id="msg_uname"></div>
+			</div>
+
+			<div class="register-box" id="passBox">
+				<label for="username" class="other_label">设 置 密 码
+					<input maxlength="20" type="password" placeholder="建议至少使用两种字符组合" id="password" name="password"/>
+					</label>
+				<div class="tips" id="msg_pass"></div>
+			</div>
+
+			<div class="register-box" id="rPassBox">
+				<label for="username" class="other_label">确 认 密 码
+					<input maxlength="20" type="password" placeholder="请再次输入密码" id="rPassword" name="rPassword"/>
+					</label>
+				<div class="tips" id="msg_rpass"></div>
+			</div>
+
+			<div class="register-box" id="telBox">
+				<label for="username" class="other_label">
+					<span>中国 0086∨</span>
+					<input class="phone" maxlength="20" type="text" placeholder="建议使用常用手机" id="telphone" name="telphone"/>
+					</label>
+				<div class="tips" id="msg_tel"></div>
+			</div>
+
+			<div class="register-box" id="codebox">
+				<label for="username" class="other_label">验 证 码
+					<input maxlength="20" type="text" placeholder="请输入验证码" name="yz" id="yz"/>
+					</label>
+				<span id="code">VJSI</span>
+				<div class="tips" id="msg_code"></div>
+			</div>
+
+			<div class="arguement" id="xyBox">
+				<input type="checkbox" id="xieyi" name="xieyi" required="required"/> 阅读并同意
+				<a href="#">《京东用户注册协议》</a>
+				<a href="#">《隐私政策》</a>
+				<div class="tips" id="msg_xy"></div>
+			</div>
+
+			<div class="submit_btn">
+				<button type="submit" id="submit_btn">立 即 注 册</button>
+			</div>
+		</form>
+
+		<script type="text/javascript">
+			$().ready(function() {
+				$("#submit_btn").click(function() {
+					$("#con_form").validate({
+						debug:true,
+						focusInvalid:true,
+						errorPlacement: function(error, element) { 
+							error.appendTo( element.parent().next(".tips")); 
+						},
+						
+						rules: {
+							username: {
+								required: true
+							},
+							password: {
+								required: true,
+								rangelength: [8, 20]
+							},
+							rPassword: {
+								required: true,
+								rangelength: [8, 20],
+								equalTo: "#password"
+							},
+							telphone: {
+								required: true,
+								isPhone: true
+							},
+							yz: {
+								required: true,
+								isYz: true
+							},
+							xieyi: {
+								required: true
+							}
+						},
+						messages: {
+							username: {
+								required: "请输入用户名"
+							},
+							password: {
+								required: "请输入密码",
+								rangelength: "请输入8~20位字符"
+							},
+							rPassword: {
+								required: "请再次输入密码",
+								minlength: "请输入8~20位字符",
+								equalTo: "两次密码输入不一致"
+							},
+							telphone: {
+								required: "请输手机号",
+								isPhone: "请正确填写您的手机号码"
+							},
+							yz: {
+								required: "请输入验证码",
+								isYz: "请输入正确的验证码"
+							},
+							xieyi: {
+								required: "请勾选用户注册协议"
+							}
+						}
+					})	
+				})
+			})
+			
+			
+			
+			
+			
+			
+			
+			//			//正则表达式演示
+//			//方式一
+//			var reg1 = /^\d{4}-\d{2}-\d{2}$/;
+//			//方式二
+//			var reg2 = new RegExp(/hello/);
+//			
+//			var r = reg1.test('2019-04-79');
+////			var str = "hell";
+////			var r = str.match(reg1);
+//			console.log(r);
+			
+		//			var conform=document.getElementById("con_form");
+//			var flag=true;	
+			//			var regbtn = document.getElementById('regbtn');
+//			//用户名验证
+//			var userbox=document.getElementById("userbox");
+//			var uname = document.getElementById('username');
+//			uname.addEventListener('blur',function(){
+//				var patrn=/^[a-zA-Z]{1,10}$/; 
+//				if(!patrn.test(uname.value) || this.value.length==0){
+//					document.getElementById('msg_uname').innerHTML="请输入正确的用户名！";
+//					flag = false;
+//					userbox.style.border = 'red 1px solid';
+//				}else{
+//					document.getElementById('msg_uname').innerHTML="";
+//					flag = true;
+//					
+//				}
+//				
+//			});
+
+//			
+//			//密码验证
+//			var passbox=document.getElementById("passBox");
+//			var password=document.getElementById("password");
+//			password.addEventListener('blur',function(){
+//				var pass=/^(\w){6,20}$/;  
+//				if(!pass.test(password.value) || this.value.length==0){
+//					document.getElementById('msg_pass').innerHTML="请输入正确的密码！";
+//					flag = false;
+//					passbox.style.border = 'red 1px solid';
+//				}else{
+//					document.getElementById('msg_pass').innerHTML="";
+//					flag = true;
+//				}
+//			});
+//			
+//			//确认密码
+//			var rPassBox=document.getElementById("rPassBox");
+//			var rPassword=document.getElementById("rPassword");		
+//			rPassword.addEventListener('blur',function(){
+//				 var pwd1 = document.getElementById("password").value;
+//  			var pwd2 = document.getElementById("rPassword").value;
+//				if(pwd1 != pwd2){
+//					document.getElementById('msg_rpass').innerHTML="两次输入的新密码不一致！";
+//					flag = false;
+//					rPassBox.style.border = 'red 1px solid';
+//				}else{
+//					document.getElementById('msg_rpass').innerHTML="";
+//					flag = true;
+//				}
+//			});
+//			
+//			//输入手机号
+//			var telBox=document.getElementById("telBox");
+//			var telphone=document.getElementById("telphone");
+//			telphone.addEventListener('blur',function(){
+//				var ptn=/^[1][3,4,5,7,8][0-9]{9}$/;  
+//				if(!ptn.test(telphone.value)){
+//					document.getElementById('msg_tel').innerHTML="手机号码是以1开头的11位纯数字！";
+//					flag = false;
+//					telBox.style.border = 'red 1px solid';
+//				}else{
+//					document.getElementById('msg_tel').innerHTML="";
+//					flag = true;
+//				}
+//			});
+//			
+//			//验证码
+//			var codebox=document.getElementById("codebox");
+//			var code=document.getElementById("code");
+//			code.addEventListener('blur',function(){
+//				if(this.value==0){
+//					document.getElementById('msg_code').innerHTML="请输入正确的验证码！";
+//					flag = false;
+//					codebox.style.border = 'red 1px solid';
+//				}else{
+//					document.getElementById('msg_code').innerHTML="";
+//					flag = true;
+//				}				
+//			});
+//			
+//			//协议部分
+//			var xyBox=document.getElementById("xyBox");
+//			var xieyi=document.getElementById("xieyi");
+//			var sbtn=document.getElementById("submit_btn");
+//			sbtn.addEventListener('click',function(){
+//				if(xieyi.value==0){
+//					document.getElementById('msg_xy').innerHTML="还未阅读并同意《京东用户注册中心》";
+//					flag = false;
+//				}else{
+//					document.getElementById('msg_xy').innerHTML="";
+//					flag = true;
+//				}	
+//				if(flag==true){
+//					conform.submit();
+//				}
+//			});
+			
+		</script>
+	</body>
+
+</html>

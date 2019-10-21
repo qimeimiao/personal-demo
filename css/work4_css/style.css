@@ -1,0 +1,122 @@
+html,body,div,a,p{margin: 0;padding: 0;}
+html,body{
+    width:100%; 
+    font: 14px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+a{
+	text-decoration: none;
+}
+.header {
+    height: 110px;
+    background: url(//misc.360buyimg.com/user/reg-com/css/i/headbg.jpg) repeat-x left bottom;
+}
+.logo-con{
+	height: 110px;
+}
+.logo{
+	float: left;
+	margin-top: 30px;
+	padding-right: 20px;
+	border-right: 1px #cccccc solid;
+}
+.logo-title {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #333;
+    padding-left: 20px;
+    margin-top: 34px;
+}
+
+
+form{
+	width: 400px;
+	margin: auto;
+	margin-top: 60px;
+}
+input{
+    outline: none;/*设置轮廓样式为无（不显示）*/
+    border:none;/*设置边框线样式为无（不显示）*/
+    
+}
+.register-box{
+	border: 1px solid #ddd;
+    margin-bottom: 32px;
+}
+label{
+	height: 52px;
+    line-height: 52px;
+    padding-left: 20px;
+    display: inline-block;/*行内元素*/
+}
+.register-box input{
+	width: 190px;
+    height: 19px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-top: 16px;
+    font-size: 14px;
+    color: #666;
+    font-family: "微软雅黑";
+}
+.tips{
+	position: absolute;
+    margin-top: -12px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.username_label{
+	word-spacing: 10px;
+}
+
+.other_label{
+	word-spacing: 2px;
+}
+
+span{
+    display: inline-block;
+    width: 77px;
+    height: 52px;
+    border-right: 1px solid #ddd;
+}
+.phone{
+	padding-left: 18px;
+}
+
+#code{
+	display: inline-block;
+    width: 100px;
+    height: 46px;
+    vertical-align: middle;
+    background-color: black;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+}
+
+.arguement{
+	margin-bottom: 58px;
+}
+.arguement input{
+	vertical-align: middle;
+}
+.arguement a{
+	color: #38f;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.submit_btn button{
+	width: 100%;
+    height: 54px;
+    color: #fff;
+    background: #e22;
+    border: 0;
+    font-size: 16px;
+    font-family: "微软雅黑";
+}

@@ -1,0 +1,83 @@
+html,body,div,table,tr,td{
+	margin: 0;
+	padding: 0;
+}
+body{
+	
+}
+.start{
+	width: 1440px;
+	height: 900px;	
+	padding-top: 58px;
+	margin: 0 auto;
+	padding: 0 auto;
+	background-image: url(../../img/work2_img/bg3.jpg);
+	background-image: 100% 100%;
+}
+.top_01{
+	color: #e5e5e5;
+	font-family: "宋体";
+	font-size: 44px;
+	padding-left: 130px;
+	margin-bottom: 76px;
+}
+.dropbtn {
+    background-color: #9a9b9a;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 130px;
+    font-size: 12px;
+    
+}
+.dropdown-content a {
+    color: black;
+    padding: 4px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #2c89f0;
+}
+span{
+	clear: both;
+	margin-left: 1000px;
+}
+.myTable{
+	clear: both;
+	margin: 0 auto;
+}
+td{
+	width: 119px;
+	height: 119px;
+	text-align: center;
+}
+.kg_01{
+	width: 24px;
+	height: 120px;
+}
+.myTable td:hover{
+	border: 1px #E5E5E5 solid;
+}

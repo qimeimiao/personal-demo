@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>树形菜单</title>
+		<style type="text/css">
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			ul,li{
+				text-decoration: none;
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<a href="javascript:onclickfclose('meun')"><img src="img/work5_img/fold.gif" /> 树形菜单</a>
+				<ul id="meun" style="display: none;">
+			 	 	<li><a href="javascript:onclickfclose('artw')"><img src="img/work5_img/fclose.gif" /> 文学艺术</a>
+				  		<ul id="artw" style="display: none;">
+						  	<li><img src="img/work5_img/doc.gif" /> 先锋写作</li>
+							<li><img src="img/work5_img/doc.gif" />小说散文</li>
+							<li><img src="img/work5_img/doc.gif" />诗风词韵</li>
+						</ul>
+					</li>
+				
+			 	 	<li><a href="javascript:onclickfclose('artz')"><img src="img/work5_img/fclose.gif" />贴图专区</a>
+				  		<ul id="artz" style="display: none;">
+						  	<li><img src="img/work5_img/doc.gif" />真我风采</li>
+							<li><img src="img/work5_img/doc.gif" />视频贴图</li>
+							<li><img src="img/work5_img/doc.gif" />行行摄摄</li>
+							<li><img src="img/work5_img/doc.gif" />flash贴图</li>
+						</ul>
+					</li>
+				
+				
+			 	 	<li><a href="javascript:onclickfclose('artf')"><img src="img/work5_img/fclose.gif" />房产论坛</a>
+				  		<ul id="artf" style="display: none;">
+						</ul>
+					</li>
+				
+			 	 	<li><a href="javascript:onclickfclose('arty')"><img src="img/work5_img/fclose.gif" />娱乐八卦</a>
+				  		<ul id="arty" style="display: none;">
+						</ul>
+					</li>
+				</ul>
+		</ul>
+			
+				
+	
+		<script type="text/javascript">
+				
+			function onclickfclose(id) {
+      			var ul = document.getElementById(id);
+      			var objv = ul.style.display;
+      			if (objv == 'none') {
+        			ul.style.display = 'block'
+      			} else {
+        			ul.style.display = 'none';
+      			}
+    		}
+			
+			
+			
+		
+		</script>
+		
+<table>
+			<a><img src="img/work5_img/left1.jpg" id="left_img" /></a>
+			<a><img src="img/work5_img/right1.jpg" id="right_img" /></a>
+		</table>
+			<a><img src="img/work5_img/end1.jpg" id="end" /></a>
+	
+	
+<script type="text/javascript">
+		
+		
+		var left=document.getElementById("left_img");
+		var right=document.getElementById("right_img");
+		var end=document.getElementById("end");
+		left.onmouseover=function(){
+			
+			left.src="img/work5_img/left1.jpg";
+			right.src="img/work5_img/right1.jpg";
+			end.src="img/work5_img/end1.jpg";
+		}
+		right.onmouseover=function(){
+			left.src='img/work5_img/left2.jpg'
+			right.src="img/work5_img/right2.jpg";
+			end.src="img/work5_img/end2.jpg";
+		}
+		
+	
+	
+
+	
+	
+</script>
+		
+		
+		
+	</body>
+</html>

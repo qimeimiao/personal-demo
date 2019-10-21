@@ -1,0 +1,102 @@
+html,body,div{margin: 0;padding: 0;}
+a{
+	text-decoration: none;
+}
+.main{
+	width: 1600px;
+	height: 900px;
+	background-color: #ffffff;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+.logo{
+	margin-top: 90px;
+	margin-left: 204px;
+	color: #00a0e9;
+	font-size: 24px;
+}
+.ma_bac{
+	margin-top: 26px; 
+	width: 1600px;
+	height: 600px;
+	background: url(../../img/work3_img/city.jpg);	
+}
+.fm{
+	width:380px ;
+	padding-top: 80px;
+	padding-left: 1100px;
+	
+}
+.fm_1{
+	width: 380px;
+	height: 400px;
+	padding-left: 30px;
+	background-color: #ecf9ff;
+}
+.ft{
+	margin-left: 204px;
+	padding-top: 26px;
+}
+.ft a{
+	font-size: 12px;
+	color: #797979;
+}
+span{
+	padding-left: 650px;
+}
+.help{
+	text-align: right;
+	color: #f4f9fe;
+}
+.help a{
+	color: #f4f9fe;
+	font-size: 16px;
+}
+h1{
+	color: #585b5d;
+	font-size: 20px;
+	padding-top: 30px;
+	font-family: "微软雅黑";
+	margin-bottom: 20px;
+}
+.uname{
+	width: 338px;
+	height: 40px;
+	
+	background: url(../../img/work3_img/ren.png) no-repeat 0 center;
+	border: 1px #cdcdcd solid;
+	box-shadow: 1px 1px 3px #cccccc;
+	text-indent: 56px;
+	background-color: #ffffff;
+	margin-bottom: 20px;
+}
+.psword{
+	width: 338px;
+	height: 40px;
+	background: url(../../img/work3_img/shuo.png) no-repeat 0 center;
+	border: 1px #cdcdcd solid;
+	box-shadow: 1px 1px 3px #cccccc;
+	text-indent: 56px;
+	background-color: #ffffff;
+	margin-bottom: 20px;
+}
+.jzmm{
+	width: 20px;
+	height: 20px;
+	border: 1px #cdcdcd solid;
+	background-color: #ffffff;
+	margin-bottom: 20px;
+}
+.submit{
+	width: 338px;
+	height: 40px;
+	text-align: center;
+	background-color: #00a0e9;
+	border: 1px #cdcdcd solid;
+	box-shadow: 1px 1px 3px #cccccc;
+	color: #F9F9F9;
+}
+
+
+

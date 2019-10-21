@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.4.0.min.js"></script>
+		<style>
+			body{
+				background: black;
+				padding: 0;
+				margin: 0;
+			}
+			img{
+				height: 120px;
+				width: 120px;
+			}
+			#pwk{
+				position: absolute;
+				z-index: 999;
+			}
+			center{display: none;}
+		</style>
+		<script>
+			
+			$(function(){
+				var isbig=false;
+				$(document).click(function(e){
+					var Len=e.clientX-60;
+					var wid=e.clientY-60;
+					var left=$("#pwk").offset().left;
+					var top=$("#pwk").offset().top;
+
+					if(isbig==false){
+							if(left<Len){
+								$("#pwk").attr("src","img/work15_img/player_right.gif")
+							}else{
+								$("#pwk").attr("src","img/work15_img/player_left.gif")
+							}					
+						}else{
+							if(left<Len){
+								$("#pwk").attr("src","img/work15_img/playerbig_right.gif")
+						}else{
+								$("#pwk").attr("src","img/work15_img/playerbig_left.gif")
+							}
+						}
+					$("#pwk").stop().animate({top:wid,left:Len},2000,function(){																		
+					})
+					
+				})
+				
+				
+			});
+		
+		</script>
+	</head>
+	
+	<body>
+		<img id="pwk" src="img/work15_img/player3.gif" />	
+	</body>
+	
+</html>
